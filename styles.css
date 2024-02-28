@@ -1,0 +1,212 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: rgb(130, 255, 220);
+   */
+  height: 120vh;
+  background: linear-gradient(135deg, #c7eafd, #f0f8ff) !important;
+  /* background-color: #f5f5f5; */
+
+  transition: background-color 0.3s ease;
+}
+
+
+.canvascont {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.canvas {
+  border: none;
+  align-items: center;
+  margin: 100px 10px;
+  width: 50vw;
+  height: 100vh;
+  box-shadow: 0px 5px 15px #00000059;
+  padding: 20px;
+  resize: vertical;
+}
+
+
+
+.modebtn {
+  text-align: center;
+  width: 60px;
+  font-size: 20px;
+  padding: 10px 20px;
+  transition: 0.3s ease-in;
+}
+
+.modebtn:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+.modebtn:focus {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.rotate:hover {
+  animation: rotate360 2s; 
+}
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.toolpanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 100px 10px;
+  padding: 30px 20px;
+  /* background-color: #e9eff3; */
+  background-color: #e89c3f;
+  /* background-color: #2c3e50; */
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px #00000059;
+  /* display: none; */
+}
+
+@media (max-width: 776px) {
+  .canvas {
+    width: 80vw;
+    height: 50vh;
+    margin: 0px 0px 30px 0px;
+  }
+  .toolpanel{
+    margin: 40px 10px;
+  }
+}
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+select {
+  padding: 18px 30px;
+  width: 218px;
+  border-radius: 5px;
+  
+  border: none;
+  cursor: pointer;
+}
+
+.number {
+  padding: 15px 0;
+  width: 61px;
+  border: 2px solid black;
+  color: white;
+  background-color: #e9eff300;
+  
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 15px 25px;
+  color: white;
+  background-color: #e9eff300;
+  border-radius: 5px!important;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  border-radius: 5px;
+}
+.casebtn {
+  font-weight: bold;
+  font-size: 12px;
+}
+.color {
+  width: 206px;
+  background-color: rgba(255, 255, 255, 0);
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 18px;
+  margin-top: 6px;
+}
+.copy {
+  font-weight: bold;
+  padding: 10px 25px;
+}
+
+button:hover {
+  /* background-color: #f4f2eb; */
+  background-color: #000000;
+  /* background-color: #a9c9e1; */
+  
+  /* background: rgb(130, 255, 220); */
+}
+
+/* background: rgb(130, 255, 220); */
+/* background: rgb(130, 255, 220); */
+/* button:focus {
+  background-color: #a9c9e1;
+} */
+button.active {
+  background-color: #a9c9e1;
+}
+
+.canvas:focus {
+  outline: none;
+}
+
+::selection{
+  background-color: #e89c3f;
+  color: white;
+}
+
+.btn-close:hover{
+  background-color: whitesmoke;
+}
+
+.modal-header{
+  background-color: #e89c3f;
+  color: white;
+}
+
+/* Dark Mode Styles  */
+
+.dark-mode {
+  background: #333333 !important;
+  color: white;
+  background-color: #2c3e50;
+}
+
+/* For Canvas Dark Mode */
+
+.darkmd{
+  background-color: #000000;
+  color: white;
+}
+
+/* For Tool Panel */
+
+.darkpanel{
+  background-color:  #1a1a1a;
+}
+
+/* For Modal Pop-Up */
+
+.darkmodal{
+  background-color:  #1e272e;
+}
+
+/* For Moon color */
+
+.moonlight{
+    color: cyan;
+}

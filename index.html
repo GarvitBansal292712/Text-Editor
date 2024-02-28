@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT EDITOR</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <script src="https://kit.fontawesome.com/91b027ae4c.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+</head>
+
+<body>
+
+    <!-- Title Of the Project -->
+
+    <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif;margin-top: 5px;">TEXT EDITOR <br>BY:
+        GARVIT BANSAL
+    </h1>
+
+    <!-- Main Structure Started -->
+    <div class="canvascont">
+        <!-- Tool Panel Structure Started -->
+        <div class="toolpanel" id="tools">
+            <div class="button-group">
+                <!-- Font Selector -->
+                <select class="form-select" id="fontSelector" onchange="selectfonts()">
+                    <option value="Select Your Fav Font" selected disabled>Select Your Favourite Font</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <input type="number" value="12" style="text-align: center;" class="number" onchange="fontsize(this)">
+                <button onclick="bold(this)"><i class="fa-solid fa-bold" style="color: #ffffff;"></i></button>
+                <button onclick="underline(this)"><i class="fa-solid fa-underline" style="color: #ffffff;"></i></button>
+                <button onclick="italic(this)"><i class="fa-solid fa-italic" style="color: #ffffff;"></i></button>
+                <button onclick="casetoggle(this)" id="caseswitch" style="font-size: 20px;">aA</button>
+
+            </div>
+            <div class="button-group">
+                <button onclick="rightalign(this)"><i class="fa-solid fa-align-right"
+                        style="color: #ffffff;"></i></button>
+                <button onclick="centeralign(this)"><i class="fa-solid fa-align-center"
+                        style="color: #ffffff;"></i></button>
+                <button onclick="leftalign(this)"><i class="fa-solid fa-align-left"
+                        style="color: #ffffff;"></i></button>
+                <button onclick="remove(this)"><i class="fa-solid fa-text-slash" style="color: #ffffff;"></i></button>
+                <button onclick="copy(this)" class="copy" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                        class="fa-solid fa-copy" style="color: #ffffff;"></i></button>
+            </div>
+            <div class="button-group">
+                <button onclick="undo(this)" style="margin: 3px;"><i class="fa-solid fa-rotate-left"
+                        style="color: #ffffff;"></i></button>
+                <button onclick="redo(this)" style="margin: 3px;"><i class="fa-solid fa-rotate-right"
+                        style="color: #ffffff;"></i></button>
+                <input type="color" class="color" onchange="color(this)">
+            </div>
+            <div class="button-group" style="display: flex;
+            justify-content: center;
+            align-items: center;">
+            <!-- Dark/Light Mode Toggler -->
+                <button class="modebtn" id="colormode" onclick="modes()"><i class="fa-solid fa-sun rotate" style="  color: yellow;
+                    "></i></button>
+
+            </div>
+        </div>
+        <!-- Tool Panel Structure Ended -->
+
+        <!-- Canvas Structure Started -->
+
+        <textarea name="" id="textarea" cols="30" rows="10" class="canvas"
+            placeholder="Enter Your Text Here...."></textarea>
+
+        <!-- Canvas Structure Ended -->
+    </div>
+    <!-- Main Structure Ended -->
+
+    <!-- Text Copied Modal Struture Started -->
+    <div class="modal fade" style="background-color:  transparent;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="dkmodal" style="border-bottom: none; border-radius: 0px;  " >
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Text Copied!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Text Copied Modal Struture Ended -->
+    <script src="main.js"></script>
+    <!-- Bootstrap Javascript CDN link -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Javascript CDN link -->
+</body>
+
+</html>
