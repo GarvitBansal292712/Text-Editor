@@ -188,7 +188,7 @@ function modes() {
 
   if (currentMode === "sun") {
     // Toggle to dark mode
-    toggle.innerHTML = '<i class="fa-solid fa-moon moonlight"></i>';
+    toggle.innerHTML = '<i class="bi bi-moon-stars-fill moonlight"></i>';
     document.body.classList.add("dark-mode");
     textarea.classList.add("darkmd");
     panel.classList.add("darkpanel");
@@ -196,7 +196,7 @@ function modes() {
     currentMode = "moon";
   } else {
     // Toggle to light mode
-    toggle.innerHTML = '<i class="fa-solid fa-sun rotate"></i>';
+    toggle.innerHTML = '<i class="bi bi-brightness-high-fill rotate"></i>';
     document.body.classList.remove("dark-mode");
     textarea.classList.remove("darkmd");
     panel.classList.remove("darkpanel");
